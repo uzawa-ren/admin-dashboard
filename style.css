@@ -1,3 +1,28 @@
+:root {
+  --nav-bg-color: #f6f4ff;
+  --main-bg-color: #d8d0fe;
+  --text-color: #374151;
+  --heading-color: #111827;
+  --sidebar-border-color: #d8d0fe;
+  scrollbar-color: #c4bfd6 #eceaf5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --nav-bg-color: #2f2d33;
+    --main-bg-color: #212024;
+    --text-color: #D1D5DB;
+    --heading-color: #E5E7EB;
+    --sidebar-border-color: #212024;
+    scrollbar-color: #4c4b53 #343238;
+  }
+
+  .nav img,
+  .logo img {
+    filter: invert(80%);
+  }
+}
+
 @font-face {
   font-family: 'Inter';
   src: local('Inter'), url(./fonts/inter-variablefont_slntwght-webfont.woff2) format("woff2"),
@@ -16,6 +41,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  color: var(--text-color)
 }
 
 img, picture, video, canvas, svg {
@@ -31,6 +57,10 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
 /* ------------ */
 /*    Layout    */
 /* ------------ */
@@ -42,17 +72,17 @@ body {
 }
 
 .main {
-  background-color: rgb(158, 158, 158);
+  background-color: var(--main-bg-color);
   display: grid;
   grid-template-rows: 150px 1fr;
 }
 
 .header {
-  background-color: rgb(83, 83, 83);
+  background-color: var(--nav-bg-color);
 }
 
 .sidebar {
-  background-color: rgb(192, 192, 192);
+  background-color: var(--nav-bg-color);
 }
 
 /* ------------ */
@@ -61,7 +91,8 @@ body {
 
 .sidebar {
   display: grid;
-  grid-template-rows: min-content min-content min-content;
+  grid-template-rows: repeat(3, min-content);
+  border-right: 1px solid var(--sidebar-border-color);
 }
 
 .sidebar .logo {

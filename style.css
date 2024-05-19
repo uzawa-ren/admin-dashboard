@@ -99,9 +99,8 @@ body {
 .sidebar .logo {
   display: grid;
   grid-template-columns: 2rem min-content;
-  align-items: center;
   gap: 10px;
-  padding: 22px 20px 50px;
+  padding: 25px 20px 50px;
 }
 
 .logo h1 {
@@ -119,10 +118,10 @@ body {
   padding: 10px 0;
   grid-template-columns: 30px min-content;
   gap: 15px;
-  align-items: center;
 }
 
-.nav a img {
+.nav a img,
+.user img {
   justify-self: center;
 }
 
@@ -136,17 +135,15 @@ body {
 }
 
 .header .top {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  justify-content: space-between;
   padding: 25px 40px;
-  gap: 100px;
 }
 
 .header .top form {
-  display: grid;
+  width: 45vw;
   grid-template-columns: 1fr min-content;
   gap: 15px;
-  align-items: center;
 }
 
 .header .top input {
@@ -169,6 +166,22 @@ body {
 }
 
 .user {
-  background-color: rgb(155, 155, 155);
+  grid-template-columns: 30px min-content max-content;
+  gap: 30px;
+}
 
+.sidebar .logo,
+.nav a,
+.header form,
+.user {
+  display: grid;
+  align-items: center;
+}
+
+.user .avatar {
+  height: 40px;
+  width: 40px;
+  background-color: var(--main-bg-color);
+  background: center / cover url(images/nakano.png);
+  border-radius: 50%;
 }

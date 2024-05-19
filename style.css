@@ -1,6 +1,7 @@
 :root {
   --nav-bg-color: #f6f4ff;
   --main-bg-color: #d8d0fe;
+  --accent-color: #9979f9;
   --text-color: #374151;
   --heading-color: #111827;
   --sidebar-border-color: #d8d0fe;
@@ -18,8 +19,7 @@
     scrollbar-color: #4c4b53 #343238;
   }
 
-  .nav img,
-  .logo img {
+  .icon {
     filter: invert(80%);
   }
 }
@@ -75,7 +75,7 @@ body {
 .main {
   background-color: var(--main-bg-color);
   display: grid;
-  grid-template-rows: 150px 1fr;
+  grid-template-rows: min-content 1fr;
 }
 
 .header {
@@ -100,7 +100,7 @@ body {
   display: grid;
   grid-template-columns: 2rem min-content;
   gap: 10px;
-  padding: 25px 20px 50px;
+  padding: 12px 20px 20px;
 }
 
 .logo h1 {
@@ -108,7 +108,7 @@ body {
 }
 
 .nav {
-  padding: 0 35px 40px;
+  padding: 0 30px 40px;
 }
 
 .nav a {
@@ -125,19 +125,22 @@ body {
   justify-self: center;
 }
 
-/* ------------ */
-/*    Header    */
-/* ------------ */
+/* --------------- */
+/*    Header Top   */
+/* ------------ ---*/
 
 .header {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: min-content 1fr;
+  padding: 10px 40px;
+  gap: 10px;
 }
 
-.header .top {
+.header .top,
+.header .bottom {
   display: flex;
   justify-content: space-between;
-  padding: 25px 40px;
+  align-items: center;
 }
 
 .header .top form {
@@ -166,22 +169,60 @@ body {
 }
 
 .user {
-  grid-template-columns: 30px min-content max-content;
-  gap: 30px;
+  grid-template-columns: 30px min-content;
+  gap: 15px;
 }
 
 .sidebar .logo,
 .nav a,
 .header form,
-.user {
+.user,
+.profile {
   display: grid;
   align-items: center;
 }
 
-.user .avatar {
+.avatar {
   height: 40px;
   width: 40px;
   background-color: var(--main-bg-color);
   background: center / cover url(images/nakano.png);
   border-radius: 50%;
+}
+
+/* ------------------- */
+/*    Header  Bottom   */
+/* ------------------- */
+
+.greeting-wrapper {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 15px;
+}
+
+.greeting-wrapper .avatar {
+  height: 80px;
+  width: 80px;
+}
+
+.greeting {
+  display: grid;
+  grid-template-rows: repeat(1fr);
+  align-content: center;
+}
+
+.management {
+  display: grid;
+  grid-template: min-content / repeat(3, 1fr);
+  gap: 20px;
+  align-self: end;
+  padding-bottom: 8px;
+}
+
+.management button {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  padding: 8px 30px;
+  color: var(--nav-bg-color);
 }

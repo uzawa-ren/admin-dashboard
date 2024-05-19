@@ -10,39 +10,39 @@
 <body>
   <div class="sidebar">
     <div class="logo">
-      <img src="images/icons/logo.svg" alt="">
+      <img class="icon" src="images/icons/logo.svg" alt="">
       <h1>Dashboard</h1>
     </div>
     <div class="nav">
       <a href="#">
-        <img src="images/icons/home.svg" alt="home icon">
+        <img class="icon" src="images/icons/home.svg" alt="home icon">
         Home
       </a>
       <a href="#">
-        <img src="images/icons/profile.svg" alt="profile icon">
+        <img class="icon" src="images/icons/profile.svg" alt="profile icon">
         Profile</a>
       <a href="#">
-        <img src="images/icons/message.svg" alt="message icon">
+        <img class="icon" src="images/icons/message.svg" alt="message icon">
         Messages</a>
       <a href="#">
-        <img src="images/icons/history.svg" alt="history icon">
+        <img class="icon" src="images/icons/history.svg" alt="history icon">
         History</a>
       <a href="#">
-        <img src="images/icons/tasks.svg" alt="tasks icon">
+        <img class="icon" src="images/icons/tasks.svg" alt="tasks icon">
         Tasks</a>
       <a href="#">
-        <img src="images/icons/communities.svg" alt="communities icon">
+        <img class="icon" src="images/icons/communities.svg" alt="communities icon">
         Communities</a>
     </div>
     <div class="nav">
       <a href="#">
-        <img src="images/icons/settings.svg" alt="settings icon">
+        <img class="icon" src="images/icons/settings.svg" alt="settings icon">
         Settings</a>
       <a href="#">
-        <img src="images/icons/support.svg" alt="support icon">
+        <img class="icon" src="images/icons/support.svg" alt="support icon">
         Support</a>
       <a href="#">
-        <img src="images/icons/privacy.svg" alt="privacy icon">
+        <img class="icon" src="images/icons/privacy.svg" alt="privacy icon">
         Privacy</a>
     </div>
   </div>
@@ -51,16 +51,30 @@
       <div class="top">
         <form action="#" method="get">
           <input type="search" name="search" id="search">
-          <button type="submit" ></button>
+          <button class="icon" type="submit" ></button>
         </form>
         <div class="user">
-          <img src="images/icons/notifications.svg" alt="notifications">
-          <div class="avatar"></div>
-          <div class="name">Azusa Nakano</div>
+          <a class="notifications" href="#">
+            <img class="icon" src="images/icons/notifications.svg" alt="notifications">
+          </a>
+          <a class="profile" href="#">
+            <div class="avatar"></div>
+          </a>
         </div>
       </div>
       <div class="bottom">
-        
+        <div class="greeting-wrapper">
+          <div class="avatar"></div>
+          <div class="greeting">
+            <div class="hi">Hi, there</div>
+            <h2 class="name">Azusa Nakano (@azunyan)</h2>
+          </div>
+        </div>
+        <div class="management">
+          <button type="button">New</button>
+          <button type="button">Upload</button>
+          <button type="button">Share</button>
+        </div>
       </div>
     </div>
     <div class="page">

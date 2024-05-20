@@ -1,7 +1,9 @@
 :root {
   --nav-bg-color: #f6f4ff;
+  --nav-hover-color: #e2dafd;
   --main-bg-color: #d8d0fe;
   --accent-color: #9979f9;
+  --hover-accent-color: #8f72e6;
   --text-color: #374151;
   --heading-color: #111827;
   --sidebar-border-color: #d8d0fe;
@@ -68,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 240px 1fr;
   height: 100vh;
 }
 
@@ -100,7 +102,8 @@ body {
   display: grid;
   grid-template-columns: 2rem min-content;
   gap: 10px;
-  padding: 12px 20px 20px;
+  margin: 12px 15px;
+  text-decoration: none;
 }
 
 .logo h1 {
@@ -108,21 +111,32 @@ body {
 }
 
 .nav {
-  padding: 0 30px 40px;
+  padding: 20px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--main-bg-color)
 }
 
 .nav a {
   display: grid;
   color: inherit;
   text-decoration: none;
-  padding: 10px 0;
+  padding: 5px 0;
   grid-template-columns: 30px min-content;
-  gap: 15px;
+  gap: 8px;
+  border-radius: 5px;
 }
 
-.nav a img,
-.user img {
+.nav a:hover {
+  background-color: var(--nav-hover-color);
+}
+
+.nav a img {
   justify-self: center;
+  height: 1.2rem;
 }
 
 /* --------------- */
@@ -130,9 +144,10 @@ body {
 /* ------------ ---*/
 
 .header {
+  flex: 1;
   display: grid;
   grid-template-rows: min-content 1fr;
-  padding: 10px 40px;
+  padding: 10px min(35px, 3%);
   gap: 10px;
 }
 
@@ -160,7 +175,7 @@ body {
   outline: none;
 }
 
-.header .top button {
+.header .top form button {
   background: 0 / contain no-repeat url(images/icons/search.svg);
   border: none;
   height: 25px;
@@ -211,7 +226,7 @@ body {
   align-content: center;
 }
 
-.management {
+.actions {
   display: grid;
   grid-template: min-content / repeat(3, 1fr);
   gap: 20px;
@@ -219,10 +234,15 @@ body {
   padding-bottom: 8px;
 }
 
-.management button {
+.actions button {
   border: none;
   border-radius: 5px;
   background-color: var(--accent-color);
-  padding: 8px 30px;
+  padding: 5px 20px;
   color: var(--nav-bg-color);
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: var(--hover-accent-color);
 }

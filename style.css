@@ -68,15 +68,17 @@ h1, h2, h3, h4, h5, h6 {
 /*    Layout    */
 /* ------------ */
 
-body {
+.grid-container {
   display: grid;
+}
+
+body {
   grid-template-columns: 240px 1fr;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .main {
   background-color: var(--main-bg-color);
-  display: grid;
   grid-template-rows: min-content 1fr;
 }
 
@@ -93,13 +95,11 @@ body {
 /* ------------ */
 
 .sidebar {
-  display: grid;
   grid-template-rows: repeat(3, min-content);
   border-right: 1px solid var(--sidebar-border-color);
 }
 
 .sidebar .logo {
-  display: grid;
   grid-template-columns: 2rem min-content;
   gap: 10px;
   margin: 12px 15px;
@@ -121,7 +121,6 @@ hr {
 }
 
 .nav a {
-  display: grid;
   color: inherit;
   text-decoration: none;
   padding: 5px 0;
@@ -134,7 +133,8 @@ hr {
   background-color: var(--nav-hover-color);
 }
 
-.nav a img {
+.nav a img,
+.right .project-actions img {
   justify-self: center;
   height: 1.2rem;
 }
@@ -145,7 +145,6 @@ hr {
 
 .header {
   flex: 1;
-  display: grid;
   grid-template-rows: min-content 1fr;
   padding: 10px min(35px, 3%);
   gap: 10px;
@@ -193,7 +192,6 @@ hr {
 .header form,
 .user,
 .profile {
-  display: grid;
   align-items: center;
 }
 
@@ -210,7 +208,6 @@ hr {
 /* ------------------- */
 
 .greeting-wrapper {
-  display: grid;
   grid-template-columns: min-content 1fr;
   gap: 15px;
 }
@@ -221,13 +218,11 @@ hr {
 }
 
 .greeting {
-  display: grid;
   grid-template-rows: repeat(1fr);
   align-content: center;
 }
 
 .actions {
-  display: grid;
   grid-template: min-content / repeat(3, 1fr);
   gap: 20px;
   align-self: end;
@@ -245,4 +240,90 @@ hr {
 
 .actions button:hover {
   background-color: var(--hover-accent-color);
+}
+
+/* --------------*/
+/*   Main page   */
+/* --------------*/
+
+.page {
+  grid-template-columns: 2fr 1fr;
+  padding: 20px;
+}
+
+.rightbar {
+  grid-template-rows: 1fr 1fr;
+}
+
+.page,
+.projects,
+.rightbar {
+  gap: 20px;
+}
+
+/* --------------*/
+/*    Projects   */
+/* --------------*/
+
+.projects-wrapper {
+  background-color: var(--main-bg-color);
+}
+.projects-wrapper h3,
+.description h4 {
+  margin-bottom: 10px;
+}
+
+.projects {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project-card {
+  background-color: var(--nav-bg-color);
+  height: 250px;
+  border-radius: 5px;
+  grid-template-columns: 10px 1fr;
+}
+
+.project-card .color-line {
+  border-radius: 5px 0 0 5px;
+  background-color: var(--accent-color);
+}
+
+.project-card .right {
+  border-radius: 0 5px 5px 0;
+  grid-template-rows: 1fr 25px;
+  padding: 15px;
+}
+
+.project-card .right p {
+  overflow: auto;
+  max-height: 150px;
+  scrollbar-width: thin;
+}
+
+.right .project-actions {
+  justify-self: right;
+  align-content: center;
+}
+
+.right .project-actions button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* -------------------*/
+/*    Announcements   */
+/* -------------------*/
+
+.announcements-wrapper {
+  background-color: darkgray;
+}
+
+/* --------------*/
+/*    Trending   */
+/* --------------*/
+
+.trending-wrapper {
+  background-color: rgb(197, 197, 197);
 }

@@ -7,80 +7,182 @@
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
 </head>
-<body>
-  <div class="sidebar">
-    <a href="#" class="logo">
+<body class="grid-container">
+  <div class="sidebar grid-container">
+    <a href="#" class="logo grid-container">
       <img class="icon" src="images/icons/logo.svg" alt="">
       <h1>Dashboard</h1>
     </a>
     <div class="nav">
-      <a href="#home">
+      <a class="grid-container" href="#home">
         <img class="icon" src="images/icons/home.svg" alt="home icon">
         Home
       </a>
-      <a href="#profile">
+      <a class="grid-container" href="#profile">
         <img class="icon" src="images/icons/profile.svg" alt="profile icon">
         Profile</a>
-      <a href="#messages">
+      <a class="grid-container" href="#messages">
         <img class="icon" src="images/icons/message.svg" alt="message icon">
         Messages</a>
-      <a href="#history">
+      <a class="grid-container" href="#history">
         <img class="icon" src="images/icons/history.svg" alt="history icon">
         History</a>
-      <a href="#tasks">
+      <a class="grid-container" href="#tasks">
         <img class="icon" src="images/icons/tasks.svg" alt="tasks icon">
         Tasks</a>
-      <a href="#communities">
+      <a class="grid-container" href="#communities">
         <img class="icon" src="images/icons/communities.svg" alt="communities icon">
         Communities</a>
     </div>
     <hr>
     <div class="nav">
-      <a href="#settings">
+      <a class="grid-container" href="#settings">
         <img class="icon" src="images/icons/settings.svg" alt="settings icon">
         Settings</a>
-      <a href="#support">
+      <a class="grid-container" href="#support">
         <img class="icon" src="images/icons/support.svg" alt="support icon">
         Support</a>
-      <a href="#privacy">
+      <a class="grid-container" href="#privacy">
         <img class="icon" src="images/icons/privacy.svg" alt="privacy icon">
         Privacy</a>
     </div>
   </div>
 
-  <div class="main">
-    <div class="header">
+  <div class="main grid-container">
+    <div class="header grid-container">
       <div class="top">
-        <form action="#" method="get">
+        <form class="grid-container" action="#" method="get">
           <input type="search" name="search" id="search">
           <button class="icon" type="submit"></button>
         </form>
-        <div class="user">
+        <div class="user grid-container">
           <a class="notifications" href="#">
             <img class="icon" src="images/icons/notifications.svg" alt="notifications">
           </a>
-          <a class="profile" href="#">
+          <a class="profile grid-container" href="#">
             <div class="avatar"></div>
           </a>
         </div>
       </div>
       <div class="bottom">
-        <div class="greeting-wrapper">
+        <div class="greeting-wrapper grid-container">
           <div class="avatar"></div>
-          <div class="greeting">
+          <div class="greeting grid-container">
             <div class="hi">Hi, there</div>
             <h2 class="name">Azusa Nakano (@azunyan)</h2>
           </div>
         </div>
-        <div class="actions">
+        <div class="actions grid-container">
           <button type="button">New</button>
           <button type="button">Upload</button>
           <button type="button">Share</button>
         </div>
       </div>
     </div>
-    <div class="page">
-
+    <div class="page grid-container">
+      <div class="projects-wrapper">
+        <h3>Your Projects</h3>
+        <div class="projects grid-container">
+          <div class="project-card grid-container">
+            <div class="color-line"></div>
+            <div class="right grid-container">
+              <div class="description">
+                <h4>Super Cool Project</h4>
+                <p>Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+              </div>
+              <div class="project-actions">
+                <button class="icon" type="button"><img src="images/icons/star.svg"></button>
+                <button class="icon" type="button"><img src="images/icons/watch.svg"></button>
+                <button class="icon" type="button"><img src="images/icons/fork.svg"></button>
+              </div>
+            </div>
+          </div>
+          <div class="project-card grid-container">
+            <div class="color-line"></div>
+            <div class="right grid-container">
+              <div class="description">
+                <h4>Less Cool Project</h4>
+                <p>Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius pellentesque lacus.</p>
+              </div>
+              <div class="project-actions">
+                <button class="icon" type="button"><img src="images/icons/star.svg"></button>
+                <button class="icon" type="button"><img src="images/icons/watch.svg"></button>
+                <button class="icon" type="button"><img src="images/icons/fork.svg"></button>
+              </div>
+            </div>
+          </div>
+          <div class="project-card grid-container">
+            <div class="color-line"></div>
+            <div class="right grid-container">
+              <div class="description">
+                <h4>Impossible App</h4>
+                <p>In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit sagittis id.</p>
+              </div>
+              <div class="project-actions">
+                <button class="icon" type="button"><img src="images/icons/star.svg"></button>
+                <button class="icon" type="button"><img src="images/icons/watch.svg"></button>
+                <button class="icon" type="button"><img src="images/icons/fork.svg"></button>
+              </div>
+            </div>
+          </div>
+          <div class="project-card grid-container">
+            <div class="color-line"></div>
+            <div class="right grid-container">
+              <div class="description">
+                <h4>Easy Peasy App</h4>
+                <p>Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget accumsan aliquam. Curabitur dignissim nisi in tortor commodo, ac bibendum magna tincidunt.</p>
+              </div>
+              <div class="project-actions">
+                <button class="icon" type="button"><img src="images/icons/star.svg"></button>
+                <button class="icon" type="button"><img src="images/icons/watch.svg"></button>
+                <button class="icon" type="button"><img src="images/icons/fork.svg"></button>
+              </div>
+            </div>
+          </div>
+          <div class="project-card grid-container">
+            <div class="color-line"></div>
+            <div class="right grid-container">
+              <div class="description">
+                <h4>Ad Blocker</h4>
+                <p>Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus vel, pharetra hendrerit felis. Aliquam sed malesuada eros.</p>
+              </div>
+              <div class="project-actions">
+                <button class="icon" type="button"><img src="images/icons/star.svg"></button>
+                <button class="icon" type="button"><img src="images/icons/watch.svg"></button>
+                <button class="icon" type="button"><img src="images/icons/fork.svg"></button>
+              </div>
+            </div>
+          </div>
+          <div class="project-card grid-container">
+            <div class="color-line"></div>
+            <div class="right grid-container">
+              <div class="description">
+                <h4>Money Maker</h4>
+                <p>Praesent convallis, libero quis congue elementum, nunc ante faucibus sapien, ac scelerisque tortor purus sit amet ex. Pellentesque mollis nec sem vel aliquam.</p>
+              </div>
+              <div class="project-actions">
+                <button class="icon" type="button"><img src="images/icons/star.svg"></button>
+                <button class="icon" type="button"><img src="images/icons/watch.svg"></button>
+                <button class="icon" type="button"><img src="images/icons/fork.svg"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightbar grid-container">
+        <div class="announcements-wrapper">
+          <h3>Announcements</h3>
+          <div class="announcements">
+          
+          </div>
+        </div>
+        <div class="trending-wrapper">
+          <h3>Trending</h3>
+          <div class="trending">
+          
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>

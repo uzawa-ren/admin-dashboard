@@ -9,40 +9,40 @@
 </head>
 <body class="grid">
   <div class="sidebar grid">
-    <a href="#" class="logo grid text-decor-none">
+    <a href="#" class="logo grid text-decor-none align-items-center">
       <img class="icon" src="images/icons/logo.svg" alt="">
       <h1>Dashboard</h1>
     </a>
     <div class="nav">
-      <a class="grid text-decor-none" href="#home">
+      <a class="grid text-decor-none align-items-center" href="#home">
         <img class="icon" src="images/icons/home.svg" alt="home icon">
         Home
       </a>
-      <a class="grid text-decor-none" href="#profile">
+      <a class="grid text-decor-none align-items-center" href="#profile">
         <img class="icon" src="images/icons/profile.svg" alt="profile icon">
         Profile</a>
-      <a class="grid text-decor-none" href="#messages">
+      <a class="grid text-decor-none align-items-center" href="#messages">
         <img class="icon" src="images/icons/message.svg" alt="message icon">
         Messages</a>
-      <a class="grid text-decor-none" href="#history">
+      <a class="grid text-decor-none align-items-center" href="#history">
         <img class="icon" src="images/icons/history.svg" alt="history icon">
         History</a>
-      <a class="grid text-decor-none" href="#tasks">
+      <a class="grid text-decor-none align-items-center" href="#tasks">
         <img class="icon" src="images/icons/tasks.svg" alt="tasks icon">
         Tasks</a>
-      <a class="grid text-decor-none" href="#communities">
+      <a class="grid text-decor-none align-items-center" href="#communities">
         <img class="icon" src="images/icons/communities.svg" alt="communities icon">
         Communities</a>
     </div>
     <hr>
     <div class="nav">
-      <a class="grid text-decor-none" href="#settings">
+      <a class="grid text-decor-none align-items-center" href="#settings">
         <img class="icon" src="images/icons/settings.svg" alt="settings icon">
         Settings</a>
-      <a class="grid text-decor-none" href="#support">
+      <a class="grid text-decor-none align-items-center" href="#support">
         <img class="icon" src="images/icons/support.svg" alt="support icon">
         Support</a>
-      <a class="grid text-decor-none" href="#privacy">
+      <a class="grid text-decor-none align-items-center" href="#privacy">
         <img class="icon" src="images/icons/privacy.svg" alt="privacy icon">
         Privacy</a>
     </div>
@@ -51,22 +51,22 @@
   <div class="main grid">
     <div class="header grid">
       <div class="top">
-        <form class="grid" action="#" method="get">
+        <form class="grid align-items-center" action="#" method="get">
           <input type="search" name="search" id="search">
           <button class="icon" type="submit"></button>
         </form>
-        <div class="user grid">
+        <div class="user grid align-items-center">
           <a class="notifications" href="#">
             <img class="icon" src="images/icons/notifications.svg" alt="notifications">
           </a>
-          <a class="profile grid" href="#">
-            <div class="avatar"></div>
+          <a class="profile grid align-items-center" href="#">
+            <div class="avatar" style="background-image: url(images/nakano.png);"></div>
           </a>
         </div>
       </div>
       <div class="bottom">
         <div class="greeting-wrapper grid">
-          <div class="avatar"></div>
+          <div class="avatar" style="background-image: url(images/nakano.png);"></div>
           <div class="greeting grid">
             <div class="hi">Hi, there</div>
             <h2 class="name">Azusa Nakano (@azunyan)</h2>
@@ -185,13 +185,41 @@
               <h4>Updated privacy policy</h4>
               <p class="truncate">Phasellus efficitur nisi eget elit consecteturt eget condimenturn ante auctor. Cras fringilla sagittis sern in rnattis, eligendi deleniti! Perferendis, quisquam. Autem sapiente earum amet magni tempora? Optio vero, assumenda id quos quisquam debitis odit eaque accusamus et.</p>
             </div>
-            <a class="see-more text-decor-none" href="">See more →</a>
+            <a class="see-more text-decor-none" href="#">See more →</a>
           </div>
         </div>
         <div class="trending-wrapper">
           <h3>Trending</h3>
-          <div class="trending">
-          
+          <div class="trendings grid">
+            <div class="trend grid align-items-center">
+              <div class="avatar" style="background-image: url(images/kotobuki.png);"></div>
+              <div class="right-wrapper">
+                <div class="nickname">@kotobuki</div>
+                <div class="project">World Peace Builder</div>
+              </div>
+            </div>
+            <div class="trend grid align-items-center">
+              <div class="avatar" style="background-image: url(images/hirasawa.png);"></div>
+              <div class="right-wrapper">
+                <div class="nickname">@hirasawa</div>
+                <div class="project">Super Cool Project</div>
+              </div>
+            </div>
+            <div class="trend grid align-items-center">
+              <div class="avatar" style="background-image: url(images/akiyama.png);"></div>
+              <div class="right-wrapper">
+                <div class="nickname">@akiyama</div>
+                <div class="project">Life Changing App</div>
+              </div>
+            </div>
+            <a href="#" class="trend grid align-items-center text-decor-none">
+              <div class="avatar" style="background-image: url(images/tainaka.png);"></div>
+              <div class="right-wrapper">
+                <div class="nickname">@tainaka</div>
+                <div class="project">No Traffic Maker</div>
+              </div>
+            </a>
+            <a class="see-more text-decor-none" href="#">See more →</a>
           </div>
         </div>
       </div>

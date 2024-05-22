@@ -1,4 +1,5 @@
 :root {
+  --gray: #7e8085;
   --nav-bg-color: #f6f4ff;
   --nav-hover-color: #e2dafd;
   --main-bg-color: #d8d0fe;
@@ -68,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 /*    Layout    */
 /* ------------ */
 
-.grid-container {
+.grid {
   display: grid;
 }
 
@@ -103,6 +104,9 @@ body {
   grid-template-columns: 2rem min-content;
   gap: 10px;
   margin: 12px 15px;
+}
+
+.text-decor-none {
   text-decoration: none;
 }
 
@@ -122,7 +126,6 @@ hr {
 
 .nav a {
   color: inherit;
-  text-decoration: none;
   padding: 5px 0;
   grid-template-columns: 30px min-content;
   gap: 8px;
@@ -199,7 +202,7 @@ hr {
   height: 40px;
   width: 40px;
   background-color: var(--main-bg-color);
-  background: center / cover url(images/nakano.png);
+  /* background: center / cover url(images/nakano.png); */
   border-radius: 50%;
 }
 
@@ -247,7 +250,7 @@ hr {
 /* --------------*/
 
 .page {
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   padding: 20px;
 }
 
@@ -269,7 +272,8 @@ hr {
   background-color: var(--main-bg-color);
 }
 .projects-wrapper h3,
-.description h4 {
+.description h4,
+.announcements-wrapper h3 {
   margin-bottom: 10px;
 }
 
@@ -295,12 +299,6 @@ hr {
   padding: 15px;
 }
 
-.project-card .right p {
-  overflow: auto;
-  max-height: 150px;
-  scrollbar-width: thin;
-}
-
 .right .project-actions {
   justify-self: right;
   align-content: center;
@@ -312,12 +310,35 @@ hr {
   cursor: pointer;
 }
 
+.project-card .right p {
+  -webkit-line-clamp: 6;
+}
+
 /* -------------------*/
 /*    Announcements   */
 /* -------------------*/
 
 .announcements-wrapper {
-  background-color: darkgray;
+  /* background-color: darkgray; */
+}
+
+.announcements {
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: var(--nav-bg-color);
+  border-radius: 5px;
+  padding: 20px;
+  gap: 20px;
+}
+
+.see-more {
+  color: var(--gray);
+}
+
+.truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* --------------*/

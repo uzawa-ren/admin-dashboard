@@ -4,6 +4,7 @@
   --main-bg-color: #d8d0fe;
   --accent-color: #9979f9;
   --hover-accent-color: #8f72e6;
+  --link-color: #3ba6ff;
   --text-color: #374151;
   --heading-color: #111827;
   --light-text-color: #5b5c61;
@@ -75,7 +76,6 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   grid-template-columns: 240px 1fr;
-  /* height: 100vh; */
 }
 
 .main {
@@ -91,6 +91,10 @@ body {
   background-color: var(--nav-bg-color);
 }
 
+/* ------------- */
+/*    General    */
+/* ------------- */
+
 .grid {
   display: grid;
 }
@@ -102,6 +106,68 @@ body {
 
 .align-items-center {
   align-items: center;
+}
+
+.nav a img,
+.right .project-actions img {
+  justify-self: center;
+  height: 1.2rem;
+}
+
+.truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.see-more {
+  color: var(--lightest-text-color);
+}
+
+.see-more:hover {
+  color: var(--link-color);
+}
+
+.page,
+.projects,
+.rightbar,
+.actions,
+.announcements,
+.trends {
+  gap: 20px;
+}
+
+.nav,
+.page,
+.announcements,
+.trends {
+  padding: 20px;
+}
+
+.nav a,
+.top input,
+.actions button,
+.project-card,
+.announcements,
+.trends,
+.trend {
+  border-radius: 5px;
+}
+
+.projects-wrapper h3,
+.description h4,
+.announcements-wrapper h3,
+.trending-wrapper h3 {
+  margin-bottom: 10px;
+}
+
+
+.description h4 a:hover,
+.announcement h4 a:hover {
+  text-decoration: underline;
+  color: var(--link-color);
+  text-decoration-thickness: 2px;
 }
 
 /* ------------ */
@@ -134,17 +200,10 @@ hr {
   padding: 5px 0;
   grid-template-columns: 30px min-content;
   gap: 8px;
-  border-radius: 5px;
 }
 
 .nav a:hover {
   background-color: var(--nav-hover-color);
-}
-
-.nav a img,
-.right .project-actions img {
-  justify-self: center;
-  height: 1.2rem;
 }
 
 /* --------------- */
@@ -172,7 +231,6 @@ hr {
 }
 
 .header .top input {
-  border-radius: 5px;
   border: 2px solid transparent; /* don't move down by 2px when focused */
   background-color: var(--main-bg-color);
 }
@@ -230,7 +288,6 @@ hr {
 
 .actions button {
   border: none;
-  border-radius: 5px;
   background-color: var(--accent-color);
   padding: 5px 20px;
   color: var(--nav-bg-color);
@@ -246,27 +303,11 @@ hr {
 /* --------------*/
 
 .page {
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr clamp(260px, 15vw, 300px);
 }
 
 .rightbar {
   grid-template-rows: 1fr 1fr;
-}
-
-.page,
-.projects,
-.rightbar,
-.actions,
-.announcements,
-.trendings {
-  gap: 20px;
-}
-
-.nav,
-.page,
-.announcements,
-.trendings {
-  padding: 20px;
 }
 
 /* --------------*/
@@ -276,11 +317,6 @@ hr {
 .projects-wrapper {
   background-color: var(--main-bg-color);
 }
-.projects-wrapper h3,
-.description h4,
-.announcements-wrapper h3 {
-  margin-bottom: 10px;
-}
 
 .projects {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -289,7 +325,6 @@ hr {
 .project-card {
   background-color: var(--nav-bg-color);
   height: 250px;
-  border-radius: 5px;
   grid-template-columns: 10px 1fr;
 }
 
@@ -326,33 +361,20 @@ hr {
 .announcements {
   grid-template-rows: repeat(3, 1fr);
   background-color: var(--nav-bg-color);
-  border-radius: 5px;
 }
 
-.see-more {
-  color: var(--lightest-text-color);
+.announcement h4 {
+  margin-bottom: 5px;
 }
 
-.truncate {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
 
 /* --------------*/
 /*    Trending   */
 /* --------------*/
 
-.trending-wrapper {
-  /* background-color: rgb(197, 197, 197); */
-}
-
-.trendings {
+.trends {
   grid-template-rows: repeat(4, 1fr);
   background-color: var(--nav-bg-color);
-  border-radius: 5px;
-  gap: 30px;
 }
 
 .trend {
@@ -360,10 +382,10 @@ hr {
   gap: 15px;
 }
 
-.trend:hover {
-  background-color: var(--nav-hover-color);
-}
-
 .project {
   color: var(--light-text-color);
+}
+
+.nickname a:hover {
+  text-decoration: underline;
 }

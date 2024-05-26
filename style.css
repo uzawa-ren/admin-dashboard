@@ -307,7 +307,7 @@ hr {
 }
 
 .rightbar {
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: min-content min-content;
 }
 
 /* --------------*/

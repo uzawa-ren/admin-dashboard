@@ -15,14 +15,14 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root { 
     --nav-bg-color: #2f2d33;
     --nav-hover-color: #242129;
-    --main-bg-color: #28272b;
+    --main-bg-color: #212024;
     --text-color: #D1D5DB;
     --heading-color: #E5E7EB;
     --light-text-color: #aaaeb4;
-    --lightest-text-color: #73747a;
+    --lightest-text-color: #8e8f96;
     --sidebar-border-color: #212024;
     scrollbar-color: #4c4b53 #343238;
   }
